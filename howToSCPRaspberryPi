@@ -17,6 +17,7 @@ Assumptions
 References
 	A) https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md (For SCP)
 	B) https://www.raspberrypi.org/documentation/remote-access/ssh/ (For SSH)
+	C) https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.70-installer.msi (PuTTY install)
 
 	
 Procedure for transferring files from PC to RPI
@@ -63,7 +64,7 @@ Transferring files from PC to RPI
 4. Transfer file to the RPI
 
 
-	A. Start off the command using "pscp" (PuTTY SCP) followed by the name of the initial file, the destinations IP address, and finally the filepath of the desired destination. 
+	A. Start off the command using "pscp" (SCP) followed by the name of the initial file, the destinations IP address, and finally the filepath of the desired destination. 
 		a. Reminder: This will only work if you are currently inside of the directory of the file you wish to transfer.
 		b. Reminder: The PSCP command is NOT executed from the SSH client. Rather, you need a regular windows cmd prompt to SCP from windows to the RPI
 		c. Example: "pscp commitTemplate.txt pi@192.168.1.105:/home/pi/Projects/Notes/commitTemplate
