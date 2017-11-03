@@ -1,0 +1,23 @@
+Useful git commands
+--------------------------------------------
+
+
+Assumptions
+	A) You have git installed on your computer
+	B) You have an account with github
+	
+	
+References
+	A) http://product.hubspot.com/blog/git-and-github-tutorial-for-beginners (for guide)
+	
+
+Transferring files from PC to RPI
+-------------------------
+1. Installing git
+
+
+	A. On linux systems (debian based)
+		a. apt-get install git
+	B. On windows systems
+		a. http://msysgit.github.io
+		
