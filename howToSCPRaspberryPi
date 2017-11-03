@@ -1,0 +1,73 @@
+How to copy files via SCP/PSCP with RPI/PC
+--------------------------------------------
+
+
+Objectives
+	A) Copy a text file from a windows PC to a Raspberry Pi 3 Model B
+
+	
+Assumptions
+	A) You have PuTTY installed on your windows based PC
+	B) You have connected via SSH between the RPI and windows PC
+	C) The RPI has SSH enabled in its config
+	D) The RPI is powered ON and is connected to the internet
+	E) You have a windows cmd prompt open on the windows PC.
+	
+	
+References
+	A) https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md (For SCP)
+	B) https://www.raspberrypi.org/documentation/remote-access/ssh/ (For SSH)
+
+	
+Procedure for transferring files from PC to RPI
+	A) Aquire initial file path
+	B) Aquire destination file path
+	C) Aquire RPI IP address
+	D) Transfer file to RPI
+	
+	
+Procedure for transferring files from RPI to PC
+	A) Aquire initial file path
+	B) Aquire destination file path
+	C) Aquire PC IP address
+	D) Transfer file to PC
+
+	
+Transferring files from PC to RPI
+-------------------------
+1. Aquire intiial file path
+
+
+	A. Navigate console to current location of desired file for transfer
+		a. Example file will be "commitTemplate.txt"
+		b. Example file will be located in C:/Users/Kotevski/Desktop/Example/commitTemplate.txt
+		c. dir command can be used to list directories
+		d. cd command can be used to change/enter a directory
+		e. To back out of a directory, type "cd .."
+		f. Directories are case sensitive
+	
+		
+2. Aquire destination file path
+
+
+	A. Example file will be located in home/pi/Projects/Notes/commitTemplate.txt
+		
+		
+3. Aquire IP for RPI
+
+
+	A. Use the "sudo hostname" or "sudo ifconfig" commands via SSH to see the IP of the RPI on your network
+	B. The IP will appear as a number containing 9-11 numbers, example: "192.168.1.105"
+		
+		
+4. Transfer file to the RPI
+
+
+	A. Start off the command using "pscp" (PuTTY SCP) followed by the name of the initial file, the destinations IP address, and finally the filepath of the desired destination. 
+		a. Reminder: This will only work if you are currently inside of the directory of the file you wish to transfer.
+		b. Reminder: The PSCP command is NOT executed from the SSH client. Rather, you need a regular windows cmd prompt to SCP from windows to the RPI
+		c. Example: "pscp commitTemplate.txt pi@192.168.1.105:/home/pi/Projects/Notes/commitTemplate
+		d. Raspberry Pi's have a default password and user for SSH/SCP. The user is "pi" and the password is typically "raspberry" 
+		e. Once completed, the SCP client will show the transfer progress until complete. It is very slow, SCP is only useful for small files usually containing just text
+	B. Ensure that all spacing is correct or the PSCP client will see several remote sources and fail to operate properly.
+	
