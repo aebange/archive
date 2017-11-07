@@ -27,13 +27,6 @@ Procedure for transferring files from PC to RPI
 	D) Transfer file to RPI
 	
 	
-Procedure for transferring files from RPI to PC
-	A) Aquire initial file path
-	B) Aquire destination file path
-	C) Aquire PC IP address
-	D) Transfer file to PC
-
-	
 Transferring files from PC to RPI
 -------------------------
 1. Aquire intiial file path
